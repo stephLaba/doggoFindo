@@ -1,0 +1,190 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+// setup
+
+
+$copy:'poppins';
+$display:'Space Mono', sans-serif;
+
+
+$gray01: #DCE0E0;
+$gray02: #484848;
+$dgray03: #767676;
+
+$black: #000000;
+$white: #ffffff;
+
+$red: #FF5A5F;
+
+a {
+	text-decoration: none;
+	@extend .transition;
+}
+
+.upcase {
+	text-transform: uppercase;
+}
+
+
+.red {
+	color: $red;
+}
+
+.transition {
+	transition: all 0.3s ease-in-out;
+}
+
+.button {
+	&.button--main {
+		background: $red;
+		border-radius: 5px;
+		color: $white;
+		border: none;
+		box-shadow: none;
+		padding: 10px;
+		@extend .transition;
+
+		&:hover,
+		&:active {
+			background: lighten($red, 5%);
+		}
+	}
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	background: $white;
+	color: $gray02;
+	font-family: $copy;
+	background-image: url(../doge_bkg_op.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: 100% 0;
+}
+
+.inner-wrapper {
+	max-width: 1080px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	h1 {
+		color: $red;
+		margin: 0;
+		padding: 20px 40px;
+		width: 40%;
+		float: left;
+		text-align: left
+	}
+}
+
+.credits__container {
+	width: 60%;
+	float: right;
+	text-align: right;
+	padding: 20px 40px;
+
+	a {
+		color: $gray02;
+		font-size: 12px;
+		margin: 0 0 0 10px;
+
+		&:hover,
+		&:active {
+			color: lighten($gray02, 30%);
+		}
+	}
+}
+
+// END: header styles
+
+
+.main__copy {
+	font-size: 48px;
+	font-family: $display;
+	max-width: 700px;
+
+	span {
+		font-weight: 700;
+	}
+}
+
+
+.main__form {
+	padding: 20px;
+	position: relative;
+	border: 1px solid $gray01;
+	box-shadow:  0 1px 3px 0 $gray01;
+	border-radius: 4px;
+	background-color: RGBA(255, 255, 255, .40);
+	padding: 0 20px;
+
+	&__location, 
+	&__distance, 
+	&__dog {
+		width: 25%;
+		float: left;
+		position: relative;
+		padding: 20px;
+		border-left: 1px solid $gray01;
+		display: inline-block;
+	}
+
+	&__location {
+		border-left: none;
+	}
+
+
+	label {
+		font-size: 12px;
+		display: block;
+	}
+
+	input[type=text] {
+		border: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	select {
+		border: none;
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.button--main {
+		margin: 20px 0 0 20px;
+		float: right;
+		padding: 10px 20px;
+	}
+}
+
+// END: main__form styles
+
+.map__section {
+	padding: 200px 0 0 0;
+}
+
+.map {
+  height: 100%;
+  width: 50%;
+  height: 100vh;
+  float: right;
+}
+
+

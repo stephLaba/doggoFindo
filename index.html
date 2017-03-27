@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+    <title>DOGGO FINDO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:100,200,300,400,500,600,700,800" rel="stylesheet">
+  </head>
+    <body>
+        <header class="clearfix">
+          <h1>Doggo Findo</h1>
+          <div class="credits__container">
+            <a href="">About</a>
+            <a href="">Credits & Thanks</a>
+          </div>
+        </header>
+        <div class="inner-wrapper">
+          <section class="main">
+            <div class="main__copy">
+              <p>
+                <span class="red">Doggo Findo</span> such unique doggos, much local.
+              </p>
+            </div>
+            <div class="row">
+              <div class="main__form__container clearfix">
+                <form class="main__form clearfix" name="search">
+                <div class="main__form__location">
+                  <label for="city">Where</label>
+                  <input id="address" type="text" name="city" value="" placeholder="enter postal code">
+                </div>
+                <!-- END: main__form__search -->
+                <div class="main__form__distance">
+                  <label for="distance">How far</label>
+                  <select class="main__input__select distance"  name="distance">
+                      <option value="10">10 km</option>
+                      <option value="25">25 km</option>
+                      <option value="50">50 km</option>
+                      <option value="100">100 km</option>
+                      <option value="all">Anywhere</option>
+                  </select>
+                </div>
+                <!-- END: main__form__distance -->
+                <div class="main__form__dog">
+                  <label for="doggo">What doggo</label>
+                  <select name="doggo" class="main__input__select">
+                    <option value="shiba_inu">Doge</option>
+                    <option value="all">all doggos</option>
+                  </select>
+                </div>
+
+                 <input id="submit" class="button button--main" type="button" value="Search">
+                </form>
+              </div>
+              <!-- END: main__form -->
+            </div>
+          </section>
+        </div>
+        <!-- END: inner-wrapper -->
+        <section class="map__section clearfix">
+          <div class="map__section__results half"></div>
+           <div class="map half" id="map"></div>
+        </section>
+        <!-- END: map__section -->
+
+      <script src="js/script.js"></script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp7Fgt0dIGsYknaMPJuzcInUMJfnmuFlA&callback=initMap">
+      </script>
+  </body>
+</html>
